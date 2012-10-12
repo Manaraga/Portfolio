@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @painting.name %>
+</p>
+
+<p>
+  <b>Catalog:</b>
+  <%= @painting.catalog_id %>
+</p>
+
+<%= image_tag painting.image_url(:thumb).to_s %>
+<%= link_to 'Edit', edit_painting_path(@painting) %> |
+<%= link_to 'Back', catalogs_path %>

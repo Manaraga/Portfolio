@@ -1,0 +1,27 @@
+<h1>Список работ</h1>
+
+<table>
+  
+
+<% @catalogs.each do |catalog| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td class="list_description">
+		<dl>
+			<dt><%= catalog.side %></dt>
+    		<dd><%= catalog.title %></dd>
+			<dd>Тэги: <%= catalog.tag_list %></dd>
+		</dl>
+	</td>
+
+    <td class="list_actions">
+		<%= link_to 'Show', catalog %>
+    	<%= link_to 'Edit', edit_catalog_path(catalog) %>
+    	<%= link_to 'Destroy', catalog, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Catalog', new_catalog_path %>

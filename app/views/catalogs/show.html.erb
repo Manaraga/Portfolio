@@ -1,0 +1,57 @@
+
+<p>
+  <b>Side:</b>
+  <%= @catalog.side %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @catalog.title %>
+</p>
+
+<p>
+  <b>Article1:</b>
+  <%= @catalog.article1 %>
+</p>
+
+<p>
+  <b>Content1:</b>
+  <%= @catalog.content1 %>
+</p>
+
+<p>
+  <b>Article2:</b>
+  <%= @catalog.article2 %>
+</p>
+
+<p>
+  <b>Content2:</b>
+  <%= @catalog.content2 %>
+</p>
+
+<p>
+  <b>Article3:</b>
+  <%= @catalog.article3 %>
+</p>
+
+<p>
+  <b>Content3:</b>
+  <%= @catalog.content3 %>
+</p>
+
+<div id="paintings">
+  <% for painting in @catalog.paintings %>
+    <div class="painting">
+      <%= image_tag painting.image_url(:thumb).to_s %>
+      <div class="name"><%= painting.name %></div>
+      <div class="actions">
+        <%= link_to "edit", edit_painting_path(painting) %> |
+        <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
+      </div>
+    </div>
+  <% end %>
+<p>
+<%= link_to "Add a Painting", new_painting_path(:catalog_id => @catalog) %> |
+<%= link_to 'Edit', edit_catalog_path(@catalog) %> |
+<%= link_to 'Back', catalogs_path %>
+</p>
