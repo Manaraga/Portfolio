@@ -1,7 +1,9 @@
 Proekt::Application.routes.draw do
   
 
-  get "welcome/index"
+  get "album/index"
+
+  
   resources :catalogs
   resources :paintings
   # The priority is based upon order of creation:
@@ -21,7 +23,7 @@ Proekt::Application.routes.draw do
   # Sample resource route with options:
   #   resources :products do
   #     member do
-  #       get 'short'
+  #       get 'short'••••••••
   #       post 'toggle'
   #     end
   #
@@ -53,7 +55,7 @@ Proekt::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'welcome#index'
+   root :to => 'album#index', as: 'album'
 
   # See how all your routes lay out with "rake routes"
 

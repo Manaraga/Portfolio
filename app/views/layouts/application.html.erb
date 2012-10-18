@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
+<div id="banner">
+  <div id="logo">
+		<div class="logo"> <a href="http://localhost:3000/">
+			<%= image_tag("logo.png") %></a>
+		</div>
+	    	<p class="logo_text"><%= image_tag("text_logo.png") %></p>
+  </div>
+ 
 
-<%= yield %>
+
+
+      <ul id="mainnav">
+        <li><span><a href="http://localhost:3000/">Моё.</a></li>
+		<li><span><a href="#">Интересно.</a></li>
+		<li><span><a href="#">Пишу о том, о сём.</a></li>
+      </ul>
+</div>
+	
+
+	<div id="main">
+			<%= yield %>
+	</div>
 
 </body>
 </html>

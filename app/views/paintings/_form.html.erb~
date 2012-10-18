@@ -1,5 +1,5 @@
 <%= form_for @painting, :html => {:multipart => true} do |f| %>
-  <%= f.error_messages %>
+  
   <%= f.hidden_field :catalog_id %>
 
   <p>
@@ -8,9 +8,10 @@
   <p>
   
   <p>
-	<%= f.file_field :image %>  
+	<%= f.file_field :image %> 
+	 
   </p>
-
+  
   <p>
     <%= f.submit %>
   <p>

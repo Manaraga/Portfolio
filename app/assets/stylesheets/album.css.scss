@@ -1,0 +1,58 @@
+// Place all the styles related to the Album controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.album{
+	#container {
+		/*border:2px solid black;*/
+		overflow: auto;
+		width: 100%;
+		margin: 60px 20px;
+	}
+
+	.item {
+		width:300px;
+		float:left;
+		margin: 0px 20px 60px 20px;
+		text-align: left;
+		padding:0;
+		display: inline-block;
+		border-bottom: 2px solid #e5e5e5;
+	}
+	img {
+		width: 300px;
+		float: left;
+		display: inline-block;
+	}
+	.caption {
+				
+				display: inline-block;
+				text-align: left;
+				font-weight:bold;
+				
+				
+			}
+	h1 {
+		padding-left:60px;
+	}
+	.descr {
+ 				text-align: left;
+				padding-top:0px;
+				padding-bottom:30px;
+				
+				
+			}
+	/*p {
+				margin: 0;
+	}*/
+	.prozrahnost a img {
+		opacity:0.8;
+		 -moz-opacity:0.8;
+		 filter:alpha(opacity=40);
+		}
+.prozrahnost a:hover img {
+	opacity:1.0;
+	 -moz-opacity:1.0;
+	 filter:alpha(opacity=100);
+
+	}
+}
