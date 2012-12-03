@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/assets/jquery.masonry.min.js"></script>
   <title>Proekt</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+<!--<style type="text/css">
+@font-face{ 
+  font-family: AleksandraC_regular;
+  src: url('img/AleksandraC_regular.otf');
+  src: url('img/AleksandraC_regular.otf?#iefix') format('embedded-opentype'),
+    url('myfont.woff') format('woff'),
+    url('img/AleksandraC_regular.ttf') format('truetype'),
+    url('img/AleksandraC_regular.svg#webfont') format('svg');
+}
+
+#mainnav a {
+	text-decoration: none;
+	height: 34px;
+	display: block;
+	line-height: 34px;
+	color: #949494;
+	font:bold 14px 'AleksandraC_regular';
+	font-family: 'AleksandraC_regular' trebushet; /* имя шрифта для CSS правил */
+	    		
+	margin: 0;
+	margin-right:70px;
+	padding-top:5px;
+	float: left;
+}
+</style>-->
+
 </head>
 <body class='<%= controller.controller_name %>'>
 <div id="banner">

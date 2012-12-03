@@ -1,9 +1,10 @@
 Proekt::Application.routes.draw do
   
-
+  get 'tags/:tag', to: 'album#index', as: :tag
   get "album/index"
 
-  
+  resources :news
+  resources :bilders
   resources :catalogs
   resources :paintings
   # The priority is based upon order of creation:

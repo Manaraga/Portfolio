@@ -1,0 +1,25 @@
+<%= form_for(@bilder) do |f| %>
+  <% if @bilder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bilder.errors.count, "error") %> prohibited this bilder from being saved:</h2>
+
+      <ul>
+      <% @bilder.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :catalog_id %><br />
+    <%= f.number_field :catalog_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

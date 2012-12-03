@@ -1,58 +1,99 @@
 // Place all the styles related to the Album controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.store{
+.album{
+	
 	#container {
 		/*border:2px solid black;*/
-		overflow: auto;
-		width: 100%;
-		margin: 60px 20px;
+		
+		margin-left: 240px;
+       /* border:dotted 1px black;*/
 	}
 
+	/*Style Tags_cloud*/
+	
+
 	.item {
-		width:300px;
+		
 		float:left;
-		margin: 0px 20px 60px 20px;
+		margin: 20px 10px;
+		
+		/*border:dotted 1px black;*/
 		text-align: left;
-		padding:0;
-		display: inline-block;
-		border-bottom: 2px solid #e5e5e5;
+		border-top: 3px solid #4dcfff;
+		
+		
 	}
-	img {
-		width: 300px;
-		float: left;
-		display: inline-block;
-	}
+	
 	.caption {
-				
-				display: inline-block;
-				text-align: left;
-				font-weight:bold;
-				
-				
-			}
-	h1 {
-		padding-left:60px;
+		margin-top:40px;
+		font-family: 'AleksandraC_regular';
+		text-align: left;
+		font-weight:bold;
 	}
-	.descr {
- 				text-align: left;
-				padding-top:0px;
-				padding-bottom:30px;
-				
-				
-			}
-	/*p {
-				margin: 0;
-	}*/
+	
+		
 	.prozrahnost a img {
 		opacity:0.8;
 		 -moz-opacity:0.8;
 		 filter:alpha(opacity=40);
-		}
-.prozrahnost a:hover img {
-	opacity:1.0;
-	 -moz-opacity:1.0;
-	 filter:alpha(opacity=100);
+	}
+	.prozrahnost a:hover img {
+		opacity:1.0;
+		 -moz-opacity:1.0;
+		 filter:alpha(opacity=100);
 
 	}
+
+/*Style news-blok */
+	#news {
+		float:left;
+		margin-top:120px;
+		margin-left:-235px;
+		width:230px;
+		/*border:dotted 1px black;*/
+	}
+	.blok {
+		border-top: 3px solid #4dcfff;
+		text-align: left;
+	}
+	#title_news {
+		margin-top:20px;
+		font-family: 'AleksandraC_regular';	
+	}
+	.image_news img {
+		width:230px;
+		
+	}
+	#description_news {
+		margin-bottom:-50px;
+		font-family: 'Trebuchet MS' !important;
+	}
+	.side {
+		background:#4dcfff;
+		float:left;
+		color:white;
+		padding-left:5px;
+		padding-right:5px;
+		margin-left:10px;
+		margin-top:0px;
+		
+	}
+	#tag_cloud {
+		font-family: 'AleksandraC_regular';
+		height:50px;
+		width:570px;
+		margin-left:250px;
+		line-height: 1.6em;
+		border-top: 3px solid #4dcfff;
+		/*border: dotted 1px black;*/
+		.s { font-size: 1.2em; }
+		.m { font-size: 1.2em; }
+		.l { font-size: 1.2em; }
+	}
+/*Time*/
+.time {
+	float:right;
+	color:black;
+}
 }

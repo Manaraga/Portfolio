@@ -1,0 +1,83 @@
+class BildersController < ApplicationController
+  # GET /bilders
+  # GET /bilders.json
+  def index
+    @bilders = Bilder.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @bilders }
+    end
+  end
+
+  # GET /bilders/1
+  # GET /bilders/1.json
+  def show
+    @bilder = Bilder.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @bilder }
+    end
+  end
+
+  # GET /bilders/new
+  # GET /bilders/new.json
+  def new
+    @bilder = Bilder.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @bilder }
+    end
+  end
+
+  # GET /bilders/1/edit
+  def edit
+    @bilder = Bilder.find(params[:id])
+  end
+
+  # POST /bilders
+  # POST /bilders.json
+  def create
+    @bilder = Bilder.new(params[:bilder])
+
+    respond_to do |format|
+      if @bilder.save
+        format.html { redirect_to @bilder, notice: 'Bilder was successfully created.' }
+        format.json { render json: @bilder, status: :created, location: @bilder }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @bilder.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /bilders/1
+  # PUT /bilders/1.json
+  def update
+    @bilder = Bilder.find(params[:id])
+
+    respond_to do |format|
+      if @bilder.update_attributes(params[:bilder])
+        format.html { redirect_to @bilder, notice: 'Bilder was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @bilder.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /bilders/1
+  # DELETE /bilders/1.json
+  def destroy
+    @bilder = Bilder.find(params[:id])
+    @bilder.destroy
+
+    respond_to do |format|
+      format.html { redirect_to bilders_url }
+      format.json { head :no_content }
+    end
+  end
+end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Catalog:</b>
+  <%= @bilder.catalog_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @bilder.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_bilder_path(@bilder) %> |
+<%= link_to 'Back', catalogs_path %>

@@ -2,7 +2,7 @@ class PaintingsController < ApplicationController
   # GET /paintings
   # GET /paintings.json
   def index
-    @paintings = Painting.all
+    @paintings = Painting.first
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +24,7 @@ class PaintingsController < ApplicationController
   # GET /paintings/new
   # GET /paintings/new.json
   def new
-    @painting = Painting.new
+    @painting = Painting.new(:catalog_id => params[:catalog_id])
 
     respond_to do |format|
       format.html # new.html.erb

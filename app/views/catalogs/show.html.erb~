@@ -1,57 +1,120 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/assets/jquery.masonry.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){ 
+    $('#container').masonry({
+// указываем элемент-контейнер в котором расположены блоки для динамической верстки
+      itemSelector: '.item',
+// указываем класс элемента являющегося блоком в нашей сетке
+          singleMode: false,
+// true - если у вас все блоки одинаковой ширины
+      isResizable: true,
+// перестраивает блоки при изменении размеров окна
+      isAnimated: true,
+// анимируем перестроение блоков
+          animationOptions: { 
+          queue: false, 
+          duration: 500 
+      }
+// опции анимации - очередь и продолжительность анимации
+    }); 
+  });
+</script>
 
-<p>
-  <b>Side:</b>
-  <%= @catalog.side %>
-</p>
+<!--blok news-->
+<div id="news">
+<% @news.each do |news| %>
+	
+	<div class="blok">
+			<div class="side">новости</div><div class="time"><!--<%= time_tag(news.created_at) %>-->
+			<%= news.created_at.to_s(:ru_datetime) %></div>
+			<div id="title_news"><%= news.title %></div>
+			<div class="image_news"><%= image_tag(news.image_url)%>
+			<div id="description_news"><%= news.description %></div></div><br>
+	</div>
+	<br><br><br>
+<% end %>
+</div>
+<!--end blok news-->
 
-<p>
-  <b>Title:</b>
-  <%= @catalog.title %>
-</p>
+<!--Ground container-->
+<div id="fantik">
+	<div class="side">
+  		<%= @catalog.side %>
+	</div>
 
-<p>
-  <b>Article1:</b>
-  <%= @catalog.article1 %>
-</p>
+	<div class="title ">
+  		<%= @catalog.title %>
+	</div>
+</div>	
+	<div id="container">
+  		<% for painting in @catalog.paintings %>
+	   	<div class="painting">
+     	 <div class = "item"><%= image_tag painting.image_url.to_s %>
+      			<div class="actions">
+       			  <%= link_to "edit", edit_painting_path(painting) %> |
+        		  <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
+     		    </div>
+		 </div>
+		<% end %>
 
-<p>
-  <b>Content1:</b>
-  <%= @catalog.content1 %>
-</p>
+		<!--OPISANIE-->
+	<div class="item">
+		<div class="opisanie">
+		<p class="article1 ">
+  			<%= @catalog.article1 %>
+		</p>
 
-<p>
-  <b>Article2:</b>
-  <%= @catalog.article2 %>
-</p>
+		<p class="content1 ">
+  			
+  			<%= @catalog.content1 %>
+		</p>
 
-<p>
-  <b>Content2:</b>
-  <%= @catalog.content2 %>
-</p>
+		<p class="article2 ">
+  			
+ 			 <%= @catalog.article2 %>
+		</p>
 
-<p>
-  <b>Article3:</b>
-  <%= @catalog.article3 %>
-</p>
+		<p class="content2 ">
+  			
+  			<%= @catalog.content2 %>
+		</p>
 
-<p>
-  <b>Content3:</b>
-  <%= @catalog.content3 %>
-</p>
+		<p class="article3 ">
+  			
+  			<%= @catalog.article3 %>
+		</p>
 
-<div id="paintings">
-  <% for painting in @catalog.paintings %>
-    <div class="painting">
-      <%= image_tag @painting.image_url(:thumb).to_s %>
-      <div class="name"><%= painting.name %></div>
-      <div class="actions">
-        <%= link_to "edit", edit_painting_path(painting) %> |
-        <%= link_to "remove", painting, :confirm => 'Are you sure?', :method => :delete %>
-      </div>
-    </div>
-  <% end %>
-<p>
-<%= link_to "Add a Painting", new_painting_path(:catalog_id => @catalog) %> |
-<%= link_to 'Edit', edit_catalog_path(@catalog) %> |
-<%= link_to 'Back', catalogs_path %>
-</p>
+		<p class="content3 ">
+  			
+  			<%= @catalog.content3 %>
+		</p>
+		</div>
+	 </div>
+	<!--END OPISANIE-->
+		<% for bilder in @catalog.bilders %>
+		 <div class = "item"><%= image_tag bilder.image_url.to_s %>
+      			<div class="actions">
+       			  <%= link_to "edit", edit_bilder_path(bilder) %> |
+        		  <%= link_to "remove", bilder, :confirm => 'Are you sure?', :method => :delete %>
+     		    </div>
+		 </div>
+   		  <% end %>
+		</div>
+  		
+	
+</div>
+
+
+		<p class="link">
+			<%= link_to "Add a Painting", new_painting_path(:catalog_id => @catalog) %> |
+			<%= link_to "Add a Bilder", new_bilder_path(:catalog_id => @catalog) %> |
+			<%= link_to 'Edit', edit_catalog_path(@catalog) %> |
+			<%= link_to 'Back', catalogs_path %>
+		</p>
+
+		
+			
+			
+		
+

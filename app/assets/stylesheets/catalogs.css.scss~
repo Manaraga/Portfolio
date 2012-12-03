@@ -1,7 +1,8 @@
 // Place all the styles related to the Catalogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.products {
+.catalogs {
+	
 	table {
 		border-collapse:collapse;
 	}
@@ -47,4 +48,109 @@
 	.list_line_odd {
 		background:#FFFFFF;
 	}
+
+	/*Style news-blok */
+	#news {
+		float:left;
+		margin-top:120px;
+		margin-left:-235px;
+		width:230px;
+		/*border:dotted 1px black;*/
+	}
+	.blok {
+		border-top: 3px solid #4dcfff;
+		text-align: left;
+	}
+	#title_news {
+		margin-top:20px;
+		font-family: 'AleksandraC_regular';	
+	}
+	.image_news img {
+		width:230px;
+		
+	}
+	#description_news {
+		margin-bottom:-50px;
+		font-family: 'Trebuchet-MS-Regular_';
+	}
+	.side {
+		background:#4dcfff;
+		float:left;
+		color:white;
+		padding-left:5px;
+		padding-right:5px;
+		margin-left:10px;
+		margin-top:0px;
+		
+	}
+	.time {
+		float:right;
+		color:black;
+	}
+
+	#fantik {
+		
+		display:inline-block;
+		width:40%;
+		border-top: 3px solid #4dcfff;
+	}
+
+	#container {
+		margin-left: 240px;
+		margin-top: 0%;
+		
+		/*border:dotted 1px black;*/
+	}
+
+	.item {
+		
+		margin: 20px;
+		float:left;
+		width:300px;		
+	}
+	
+	.opisanie {
+		               
+		margin-left:90px;
+		border:dotted 1px black;
+	}
+	
+	.article1 {
+		font-family: 'AleksandraC_regular';
+	}
+
+	.article2 {
+		font-family: 'AleksandraC_regular';
+	}
+
+	.article3 {
+		font-family: 'AleksandraC_regular';
+	}
+	.content1 {
+		font-family: 'Trebuchet-MS-Regular_';
+	}
+	.content2 {
+		font-family: 'Trebuchet-MS-Regular_';
+	}
+	.content3 {
+		font-family: 'Trebuchet-MS-Regular_';
+	}
+	
+	.title {
+		margin-top:50px;
+		margin-left:-20px;
+		font-weight:bold;
+		font-size: 40px;
+		font-family: 'AleksandraC_regular';
+	}
+	
+	.link {
+		float:right;
+	}
+	/*.painting {
+		float:left;
+		display:inline-block;
+		margin-left:10px;
+	}*/
+
 }

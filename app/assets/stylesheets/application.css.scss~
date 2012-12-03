@@ -11,27 +11,37 @@
  *= require_self
  *= require_tree .
  */
+@font-face {
+ font: {
+     family: 'AleksandraC_regular';
+     weight: 'normal';
+     style: 'normal';
+    }
+ src: asset-url('AleksandraC_regular.ttf', font) format('truetype');
+}
+
 
 #banner {
+	border: 1px solid red;
 	
 	#logo {
 		margin-top:20px;
 		margin-left:20px;
 		width:218px;
 		float:left;
-		border: 1px solid red;
+		/*border: 1px solid red;*/
 		}
 	.logo img {
-		width:65px;
+		width:75px;
 		padding-left:60px;
-		border: 1px solid red;
+		/*border: 1px solid red;*/
 	}
     
 	.logo_text img {
 		padding-top: 15px;
 		padding-left: 30px;
 		float:left;
-		width:150px;	
+		/*width:150px;*/	
 		border: 1px solid red;
     	
 	}
@@ -40,17 +50,17 @@
 
 #mainnav {
 	list-style-type: none;
-	margin:0 10 0 0;
+	margin:0 0 0 0;
 	/*display: block;*/
 	display: inline-block;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 #mainnav li {
 	display: inline-block;
 	float: left;
 	margin: 0 0 0 4px;
 	padding: 0 0 0 6px;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 #mainnav a {
 	text-decoration: none;
@@ -58,10 +68,9 @@
 	display: block;
 	line-height: 34px;
 	color: #949494;
-	font:bold 14px verdana;
-	font-family: verdana; /* имя шрифта для CSS правил */
-	    		src: local("verdana"), /* проверяем наличие шрифта в ОС пользователя */
-	         	url(assets/images/verdana.ttf);
+	font:bold 14px 'AleksandraC_regular';
+	font-family: 'AleksandraC_regular' !important; /* имя шрифта для CSS правил */
+	    		
 	margin: 0;
 	margin-right:70px;
 	padding-top:5px;

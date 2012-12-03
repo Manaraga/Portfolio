@@ -3,6 +3,7 @@ class CatalogsController < ApplicationController
   # GET /catalogs.json
   def index
     @catalogs = Catalog.all
+	
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,7 @@ class CatalogsController < ApplicationController
   # GET /catalogs/1.json
   def show
     @catalog = Catalog.find(params[:id])
-
+	@news = News.order('news.created_at DESC')
   end
 
   # GET /catalogs/new
