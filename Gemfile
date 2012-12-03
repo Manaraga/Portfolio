@@ -5,8 +5,8 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
-gem 'mysql' 
+gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+#gem 'mysql' 
 gem 'mocha', :group => :test
 
 # Gems used only for assets and not required
