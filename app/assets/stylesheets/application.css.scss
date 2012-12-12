@@ -84,13 +84,14 @@
 	padding-top:5px;
 	float: left;
 }
-#mainnav a:hover { text-decoration: none }
+#mainnav a:hover { text-decoration: underline;}
 #mainnav span {
 	display: block;
 	margin: 0;
 	padding: 0 6px 0 0;
 	float: left;
 }
+
 #mainnav li.current,
 #mainnav li.current span,
 #mainnav li.current span a,

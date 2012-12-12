@@ -20,6 +20,14 @@
  src: asset-url('AleksandraC_regular.ttf', font) format('truetype');
 }
 
+@font-face {
+ font: {
+     family: 'Trebuchet-MS-Regular_';
+     weight: 'normal';
+     style: 'normal';
+    }
+ src: asset-url('Trebuchet-MS-Regular_.ttf', font) format('truetype');
+}
 
 #banner {
 	border: 1px solid red;
@@ -76,13 +84,14 @@
 	padding-top:5px;
 	float: left;
 }
-#mainnav a:hover { text-decoration: none }
+#mainnav a:hover { text-decoration: none}
 #mainnav span {
 	display: block;
 	margin: 0;
 	padding: 0 6px 0 0;
 	float: left;
 }
+
 #mainnav li.current,
 #mainnav li.current span,
 #mainnav li.current span a,

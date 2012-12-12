@@ -43,7 +43,7 @@
   		<%= @catalog.side %>
 	</div>
 
-	<div class="title ">
+	<div class="title">
   		<%= @catalog.title %>
 	</div>
 </div>	
@@ -59,7 +59,7 @@
 		<% end %>
 
 		<!--OPISANIE-->
-	<div class="item">
+	<div class="">
 		<div class="opisanie">
 		<p class="article1 ">
   			<%= @catalog.article1 %>

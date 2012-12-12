@@ -67,7 +67,7 @@
 	}
 	#description_news {
 		margin-bottom:-50px;
-		font-family: 'Trebuchet MS' !important;
+		font-family: 'Trebuchet-MS-Regular_' !important;
 	}
 	.side {
 		background:#4dcfff;
@@ -77,6 +77,7 @@
 		padding-right:5px;
 		margin-left:10px;
 		margin-top:0px;
+		font-family: 'AleksandraC_regular';
 		
 	}
 	#tag_cloud {
@@ -90,6 +91,18 @@
 		.s { font-size: 1.2em; }
 		.m { font-size: 1.2em; }
 		.l { font-size: 1.2em; }
+	}
+	.tags a {
+		color: #949494;
+		text-decoration: none;	
+	}
+	.tags a:hover {
+		color: black;
+		text-decoration: underline;
+	}
+	.tags a:active {
+		color: red;
+		text-decoration: underline;
 	}
 /*Time*/
 .time {

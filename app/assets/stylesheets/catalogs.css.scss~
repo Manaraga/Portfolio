@@ -106,13 +106,16 @@
 		
 		margin: 20px;
 		float:left;
-		width:300px;		
+		/*width:300px;*/		
 	}
 	
 	.opisanie {
-		               
-		margin-left:90px;
+		position:relative; 
+		margin: 20px;
+		float:left;           
+		margin-left:43px;
 		border:dotted 1px black;
+		width:200px;
 	}
 	
 	.article1 {
@@ -138,7 +141,7 @@
 	
 	.title {
 		margin-top:50px;
-		margin-left:-20px;
+		border:solid 1px black;
 		font-weight:bold;
 		font-size: 40px;
 		font-family: 'AleksandraC_regular';

@@ -106,13 +106,14 @@
 		
 		margin: 20px;
 		float:left;
-		width:300px;		
+		/*width:300px;*/		
 	}
 	
 	.opisanie {
-		               
-		margin-left:90px;
+		position:relative; 
+		margin-left:43px;
 		border:dotted 1px black;
+		width:200px;
 	}
 	
 	.article1 {
