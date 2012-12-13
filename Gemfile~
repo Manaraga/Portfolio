@@ -6,7 +6,7 @@ gem 'mysql2'
 
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
 group :development do
@@ -30,6 +30,7 @@ end
 
 group :production do
   gem 'pg', '0.12.2'
+  
 end
 
 gem 'rmagick'
@@ -46,9 +47,9 @@ gem 'nifty-generators'
 
 # Use unicorn as the app server
  gem 'unicorn'
-
+ gem 'execjs'
 # Deploy with Capistrano
  gem 'capistrano'
-
+ gem 'libv8', '~> 3.11.8'
 # To use debugger
 # gem 'debugger'
