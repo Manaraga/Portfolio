@@ -46,7 +46,7 @@ gem 'nifty-generators'
 
 # Use unicorn as the app server
  gem 'unicorn'
-
+ gem 'execjs'
 # Deploy with Capistrano
  gem 'capistrano'
 
