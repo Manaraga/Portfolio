@@ -29,7 +29,7 @@ require 'bundler/capistrano'
 # сжатых файлов статики при деплое.
 # Если вы не используете assets pipelining в своем проекте,
 # или у вас старая версия rails, закомментируйте эту строку.
-load 'deploy'
+#load 'deploy'
 
 # Для удобства работы мы рекомендуем вам настроить авторизацию
 # SSH по ключу. При работе capistrano будет использоваться
@@ -79,7 +79,7 @@ set :scm,             :git
 set :repository,      "ssh://#{user}@#{deploy_server}/home/#{user}/git/#{application}.git"
 
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
- set :repository,    "git@github.com:Manaraga/Portfolio.git"
+# set :repository,    "git@github.com:Manaraga/Portfolio.git"
 
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 

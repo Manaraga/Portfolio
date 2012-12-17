@@ -25,10 +25,10 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: arsdmitr_ars-d58
+  database: arsdmitr_ars-d96
   pool: 5
-  username: arsdmitr_ars-d58
-  password: j2L2D3AG
+  username: arsdmitr_ars-d96
+  password: bNwCQCKs
   host: mysql0.locum.ru
 
 #production:
@@ -40,8 +40,8 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: arsdmitr_ars-d58
+  database: arsdmitr_ars-d96
   pool: 5
-  username: arsdmitr_ars-d58
-  password: j2L2D3AG
+  username: arsdmitr_ars-d96
+  password: bNwCQCKs
   host: mysql0.locum.ru
